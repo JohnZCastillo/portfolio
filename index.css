@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+    --main-color: #264653;
+    --secondary-color: #E9C46A;
+    --accent-color: #E76F51;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+
+li{
+    list-style-type: none;
+}
+
+section{
+    font-family: Montserrat;
+}
+.center{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+/* style starts here */
+
+.navigation{
+    display: flex;
+    gap: 1rem;
+    color: var(--secondary-color);
+    font-family: 'Bebas Neue';
+    font-size: 1.5rem;
+}
+.navigation > li{
+    cursor: pointer;
+}
+.nav{
+    background-color: var(--main-color);
+}
+
+.contact-wrapper{
+  background-color: var(--main-color);
+}
+.contact{
+    color: var(--accent-color);
+  
+}
