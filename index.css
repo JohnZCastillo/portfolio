@@ -60,8 +60,6 @@ li{
     justify-content: center;
     align-items: center;
     gap: 1rem;
-
-    box-shadow: 1px 1px 5px black;
 }
 .about-text{
     display: flex;
@@ -69,6 +67,8 @@ li{
     align-items: center;
     justify-content: center;
     gap: .5rem;
+
+    text-align: center;
 }
 .about > img{
     max-width: 200px;
