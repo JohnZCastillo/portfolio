@@ -12,46 +12,74 @@
     box-sizing: border-box;
 }
 
-.container{
+section,nav, footer{
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 2.5rem;
 }
 
+section{
+    font-family: Montserrat;
+    padding-inline: 2rem;
+    margin-top: 1.5rem;
+}
 
 li{
     list-style-type: none;
 }
 
-section{
-    font-family: Montserrat;
-}
-.center{
-    width: 90%;
-    text-align: center;
-    margin: 0 auto;
-}
-/* style starts here */
+/* navigation starts here */
 
 .navigation{
+    
+    padding: 1.5rem 60% 1.5rem 1.5rem;
+
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--main-color);
     color: var(--secondary-color);
+
     font-family: 'Bebas Neue';
     font-size: 1.5rem;
+
 }
+
 .navigation > li{
     cursor: pointer;
 }
-.nav{
-    background-color: var(--main-color);
-}
 
-.contact-wrapper{
-  background-color: var(--main-color);
+/* -- About starts here --*/
+
+.about{
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    box-shadow: 1px 1px 5px black;
+}
+.about-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+.about > img{
+    max-width: 200px;
+    height: auto;
 }
 .contact{
     color: var(--accent-color);
+    background-color: var(--main-color);
+
+    padding: 2.5rem;
   
 }
+
+/* About styles starts here */
