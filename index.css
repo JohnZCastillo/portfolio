@@ -6,55 +6,65 @@
     --secondary-color: #E9C46A;
     --accent-color: #E76F51;
 }
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-section,nav, footer{
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-section{
-    font-family: Montserrat;
-    padding-inline: 2rem;
-    margin-top: 1.5rem;
-}
-
 li{
     list-style-type: none;
 }
 
-/* navigation starts here */
-
-.navigation{
-    
-    padding: 1.5rem 60% 1.5rem 1.5rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    background-color: var(--main-color);
-    color: var(--secondary-color);
-
-    font-family: 'Bebas Neue';
-    font-size: 1.5rem;
-
+a{
+    text-decoration: none;
 }
 
-.navigation > li{
+
+/* navigation starts here */
+
+.head{
+    background-color: var(--main-color);
+}
+
+.nav{
+    width: 40%;
+}
+
+.nav__burger{
+    width: 50px;
+    padding: .5em;
+    display: none;
+}
+
+.nav__burger:hover{
     cursor: pointer;
+}
+
+.nav__burger > div{
+     height: .2rem;
+     background-color: black;
+     margin-top: .5em;
+}
+
+.nav__lists{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 1.2em;
+      font-family: 'Bebas Neue';
+      font-size: 1.2rem;
+}
+
+.nav__link{
+    color: var(--secondary-color);
 }
 
 /* -- About starts here --*/
 
 .about{
     padding: 10px;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -67,9 +77,9 @@ li{
     align-items: center;
     justify-content: center;
     gap: .5rem;
-
     text-align: center;
 }
+
 .about > img{
     max-width: 200px;
     height: auto;
@@ -77,9 +87,45 @@ li{
 .contact{
     color: var(--accent-color);
     background-color: var(--main-color);
-
-    padding: 2.5rem;
-  
+    padding: 2.5rem;  
 }
 
-/* About styles starts here */
+/* Utility */
+.container{
+    width: 100vw;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-inline: 1.2rem;
+}
+
+/* For mobile users */
+@media only screen and (max-width: 600px) {
+   .nav{
+        max-width: 50vw;
+        justify-content: center;
+        align-items: center;
+        padding-block: 9px;
+   }
+    .nav__lists{
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 0;
+       height: 100vh;
+       flex-direction: column;
+       align-items: center;
+       justify-content: flex-start;
+       background-color: #E76F51;
+       transition: width 500ms;
+       overflow: hidden;
+   }
+   .burger-open{
+        width: 30vw;
+   }
+   .nav__list{
+       margin-top: .5em;
+   }
+   .nav__burger{
+       display: block;
+   }
+  }
