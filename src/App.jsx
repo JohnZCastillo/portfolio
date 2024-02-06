@@ -55,14 +55,14 @@ function App() {
   let description = "test";
 
   useEffect(() => {
-    ScrollReveal().reveal(".scrollProject", { delay: 250, reset:true, easing: 'ease-in' });
+    // ScrollReveal().reveal(".scrollProject", { delay: 250, reset:true, easing: 'ease-in' });
   },[]);
 
   return (
     <>
       <Nav />
       <Hero />
-      <section className="grid grid-cols-1 md:grid-cols-2">
+      <section className="grid grid-cols-1 md:grid-cols-2 justify-between gap-2">
         <Project
           img="parcel-tracker.png"
           title="Parcel Tracker"
