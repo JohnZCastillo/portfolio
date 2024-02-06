@@ -55,7 +55,7 @@ function App() {
   let description = "test";
 
   useEffect(() => {
-    // ScrollReveal().reveal(".scrollProject", { delay: 250, reset:true, easing: 'ease-in' });
+    ScrollReveal().reveal(".scrollProject", { delay: 250, reset:true, easing: 'ease-in' });
   },[]);
 
   return (
