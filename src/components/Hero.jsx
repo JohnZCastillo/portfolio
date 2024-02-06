@@ -6,9 +6,9 @@ export default function Hero() {
           <span className="text-xl">I'm John</span>
           <h1 className="family-poppins text-5xl font-bold">Web Developer</h1>
           <div className="flex items-center">
-          <img src="/bxl-github.svg"/>
-          <img src="/bxl-gmail.svg"/>
-          <img src="/bxl-linkedin.svg"/>
+          <img src="./bxl-github.svg"/>
+          <img src="./bxl-gmail.svg"/>
+          <img src="./bxl-linkedin.svg"/>
           </div>
         </div>
       </div>
