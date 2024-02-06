@@ -55,26 +55,30 @@ function App() {
   let description = "test";
 
   useEffect(() => {
-    ScrollReveal().reveal(".scrollProject", { delay: 250, reset:true, easing: 'ease-in' });
-  },[]);
+    // ScrollReveal().reveal(".scrollProject", { delay: 250, reset:true, easing: 'ease-in' });
+  }, []);
 
   return (
     <>
       <Nav />
       <Hero />
-      <section className="grid grid-cols-1 md:grid-cols-2 justify-between gap-2">
-        <Project
-          img="parcel-tracker.png"
-          title="Parcel Tracker"
-          description={description}
-          icons={[Icons.node,Icons.github, Icons.mongo, Icons.mysql]}
-        />
-        <Project
-          img="carrisa.png"
-          title="Carrisa Homes"
-          description={description}
-          icons={[Icons.php, Icons.github]}
-        />
+      <section className="px-2">
+        <h2 className="text-2xl">Projects</h2>
+
+        <div className="py-4 grid grid-cols-1 md:grid-cols-2 justify-between gap-2">
+          <Project
+            img="parcel-tracker.png"
+            title="Parcel Tracker"
+            description={description}
+            icons={[Icons.node, Icons.github, Icons.mongo, Icons.mysql]}
+          />
+          <Project
+            img="carrisa.png"
+            title="Carrisa Homes"
+            description={description}
+            icons={[Icons.php, Icons.github]}
+          />
+        </div>
       </section>
     </>
   );

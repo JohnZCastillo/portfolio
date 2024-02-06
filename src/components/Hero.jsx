@@ -1,14 +1,19 @@
 export default function Hero() {
   return (
-    <section className="scrollHero grid grid-cols-1 md:grid-cols-2">
-      <div className="order-2 md:order-1 flex items-center justify-center">
+    <section className="h-svh scrollHero grid grid-cols-1 md:grid-cols-2 ">
+      <div  className="order-2 md:order-1 flex items-center justify-center">
         <div>
-          <span>I'm John</span>
-          <h1>Web Developer</h1>
+          <span className="text-xl">I'm John</span>
+          <h1 className="family-poppins text-5xl font-bold">Web Developer</h1>
+          <div className="flex items-center">
+          <img src="/bxl-github.svg"/>
+          <img src="/bxl-gmail.svg"/>
+          <img src="/bxl-linkedin.svg"/>
+          </div>
         </div>
       </div>
-      <div className="order-1 md:order-2">
-        <img src="id.png" />
+      <div className="order-1 md:order-2 flex items-end justify-center">
+        <img className="mx-auto w-auto" style={{height: 500}} src="id.png" />
       </div>
     </section>
   );
