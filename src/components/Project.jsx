@@ -12,7 +12,7 @@ export default function Project({
 }) {
   return (
     <>
-      <Card srcset='' className="max-w-sm mx-auto"  imgSrc={img} horizontal>
+      <Card className="max-w-sm mx-auto scrollProject"  imgSrc={img} horizontal>
         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {title}
         </h5>
