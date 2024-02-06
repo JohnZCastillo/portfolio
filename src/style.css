@@ -21,7 +21,7 @@
 
 .scrollHero{
 
-  max-height: calc(100vh - 44px);
+  min-height: calc(100svh - 44px);
 
   background-image: url('/bg.png');
   background-repeat: no-repeat;

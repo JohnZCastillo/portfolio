@@ -1,11 +1,11 @@
 export default function Hero() {
   return (
-    <section className="h-svh scrollHero grid grid-cols-1 md:grid-cols-2 ">
+    <section className="scrollHero grid grid-cols-1 md:grid-cols-2 ">
       <div  className="order-2 md:order-1 flex items-center justify-center">
-        <div>
+        <div className="px-3 py-4 text-center md:text-left">
           <span className="text-xl">I'm John</span>
           <h1 className="family-poppins text-5xl font-bold">Web Developer</h1>
-          <div className="flex items-center">
+          <div className="flex items-center justify-center md:justify-start">
           <img src="./bxl-github.svg"/>
           <img src="./bxl-gmail.svg"/>
           <img src="./bxl-linkedin.svg"/>
