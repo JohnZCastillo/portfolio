@@ -23,7 +23,7 @@
 
   min-height: calc(100svh - 44px);
 
-  background-image: url('/bg.png');
+  background-image: url('/stack.png'); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

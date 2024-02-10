@@ -5,8 +5,12 @@
 
 *{
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
 }
+
 .icon{
     width: 30x;
     height: 40px;
 }
+
