@@ -10,13 +10,11 @@ export default function Nav() {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="#" active>
-            Home
-          </Navbar.Link>
-          <Navbar.Link href="#">About</Navbar.Link>
-          <Navbar.Link href="#">Projects</Navbar.Link>
-          <Navbar.Link href="#">Skill</Navbar.Link>
-          <Navbar.Link href="#">Contact</Navbar.Link>
+          <Navbar.Link className='text-xl text-white' href="#" >Home</Navbar.Link>
+          <Navbar.Link className='text-xl text-white' href="#">About</Navbar.Link>
+          <Navbar.Link className='text-xl text-white' href="#">Projects</Navbar.Link>
+          <Navbar.Link className='text-xl text-white' href="#">Skill</Navbar.Link>
+          <Navbar.Link className='text-xl text-white' href="#">Contact</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
     );
