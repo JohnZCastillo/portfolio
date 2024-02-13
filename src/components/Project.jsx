@@ -13,7 +13,7 @@ export default function Project({
   return (
     <>
         <Card
-          className="max-w-sm mx-auto bg-[#1d1b22] border-[#1d1b22]"
+          className="max-w-sm mx-auto"
           imgSrc={img}
           horizontal
         >

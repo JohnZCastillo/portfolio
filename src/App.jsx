@@ -11,8 +11,7 @@ import Php from "./assets/php.svg?react";
 import Mongo from "./assets/mongo-db.svg?react";
 import Mysql from "./assets/mysql.svg?react";
 import { useEffect } from "react";
-
-import { Footer } from "flowbite-react";
+import Bottom from './components/Bottom';
 
 const Icons = {
   github: {
@@ -113,7 +112,11 @@ function App() {
             />
           </div>
         </section>
+
       </div>
+
+      < Bottom />
+
     </>
   );
 }
