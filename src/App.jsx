@@ -11,7 +11,7 @@ import Php from "./assets/php.svg?react";
 import Mongo from "./assets/mongo-db.svg?react";
 import Mysql from "./assets/mysql.svg?react";
 import { useEffect } from "react";
-import Bottom from './components/Bottom';
+import Bottom from "./components/Bottom";
 
 const Icons = {
   github: {
@@ -56,8 +56,11 @@ function App() {
   let description = "test";
 
   useEffect(() => {
-    ScrollReveal().reveal(".scrollProject", { delay: 250, reset:true, easing: 'ease-in' });
-  
+    ScrollReveal().reveal(".scrollProject", {
+      delay: 250,
+      reset: true,
+      easing: "ease-in",
+    });
   }, []);
 
   return (
@@ -69,13 +72,10 @@ function App() {
         <section className="py-6 min-h-96 scrollAbout px-2">
           <h2 className="text-5xl md:text-6xl mb-2 font-bold">About</h2>
           <p className="max-w-[75ch] mb-4 text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
-            assumenda libero iusto sint? Ab debitis omnis quibusdam vel
-            incidunt. Aut porro beatae accusamus nihil id iusto, alias
-            asperiores nobis veniam. Illo magni libero nostrum iure repellendus
-            ducimus quibusdam, quisquam atque? Ratione beatae aperiam voluptate,
-            quis distinctio qui commodi cumque vero quaerat quisquam laboriosam
-            dicta magni perferendis. Quisquam maxime quas eligendi. Nobis
+            I am John Castillo, taking Bachelor of Science in Information
+            Technology at Cavite State University - Tanza Campus. In my free
+            time, I watch videos about technology and read books about personal
+            development and technology.
           </p>
         </section>
 
@@ -87,15 +87,15 @@ function App() {
         </section>
 
         <section className="scrollProject min-h-svh ">
-          <h2 className="text-5xl md:text-6xl mb-2 font-bold">Projects</h2>
+          <h2 className="text-5xl md:text-6xl mb-2 font-bold">
+            Recent Projects
+          </h2>
           <p className="max-w-[80ch] mb-4 text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex at
-            maiores sit fugit quia amet. Quas dolore voluptatem distinctio non
-            eum ab amet inventore pariatur veniam dolores in, mollitia magnam!
-            Veniam aspernatur maiores totam sed quisquam quibusdam. Eius quaerat
-            atque quisquam ipsa neque iusto libero veritatis corrupti rerum
-            aliquam assumenda sequi, ducimus nihil vel eos, accusamus earum
-            maxime dignissimos? Animi!
+            In recent times, I've been deeply engaged in several exciting
+            projects that showcase my commitment to innovation, quality, and
+            meaningful impact. Check out some of the things I've been working on
+            lately that show how dedicated I am to doing a great job in
+            different areas.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 justify-evenly">
             <Project
@@ -112,11 +112,9 @@ function App() {
             />
           </div>
         </section>
-
       </div>
 
-      < Bottom />
-
+      <Bottom />
     </>
   );
 }

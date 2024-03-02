@@ -13,7 +13,7 @@ export default function Project({
   return (
     <>
         <Card
-          className="max-w-sm mx-auto"
+          className="max-width-sm mx-auto"
           imgSrc={img}
           horizontal
         >
@@ -24,11 +24,11 @@ export default function Project({
             {description}
           </p>
 
-          <div>
+          <div className="grid grid-cols-1 ">
             <span>
               {website ? (
                 <a target="_blank" href="https://blue-muddy-bream.cyclic.app/">
-                  https://blue-muddy-bream.cyclic.app/
+                 Parcel Tracker
                 </a>
               ) : (
                 <></>
@@ -37,10 +37,11 @@ export default function Project({
             <span>
               <Github fill="grey" />
               <a href=" https://github.com/JohnZCastillo/parcel-tracker">
-                https://github.com/JohnZCastillo/parcel-tracker
+              Parcel Tracker
               </a>
             </span>
           </div>
+
           <div className="flex gap-2">
             {icons.map(({ svg, color, name, hover }, index) => {
               return (
