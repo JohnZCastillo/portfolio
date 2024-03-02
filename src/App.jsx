@@ -4,6 +4,13 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import ScrollReveal from "scrollreveal";
 
+import CSS from "./assets/css.svg?react";
+import TailWind from "./assets/tailwind.svg?react";
+import Express from "./assets/express.svg?react";
+
+import Bootstrap from "./assets/bootstrap.svg?react";
+import Javascript from "./assets/javascript.svg?react";
+import HTML from "./assets/html.svg?react";
 import Github from "./assets/github.svg?react";
 import Mailgun from "./assets/mailgun.svg?react";
 import Node from "./assets/node-js.svg?react";
@@ -50,11 +57,52 @@ const Icons = {
     name: "MySql",
     hover: "icon hover:fill-[#00758F]",
   },
+  html: {
+    svg: HTML,
+    color: "grey",
+    name: "HTML",
+    hover: "icon hover:fill-[#00758F]",
+  },
+  css: {
+    svg: CSS,
+    color: "grey",
+    name: "CSS",
+    hover: "icon hover:fill-[#00758F]",
+  },
+  tailwind: {
+    svg: TailWind,
+    color: "grey",
+    name: "Tailwind",
+    hover: "icon hover:fill-[#00758F]",
+  },
+  express: {
+    svg: Express,
+    color: "grey",
+    name: "Express",
+    hover: "icon hover:fill-[#00758F]",
+  },
+  javascript: {
+    svg: Javascript,
+    color: "grey",
+    name: "Javascript",
+    hover: "icon hover:fill-[#00758F]",
+  },
+  bootstrap: {
+    svg: Bootstrap,
+    color: "grey",
+    name: "Bootstrap",
+    hover: "icon hover:fill-[#00758F]",
+  },
+};
+
+let descriptions = {
+  carrisa:
+    "Professional platform designed to streamline subdivision management, providing users with seamless access to pay and track their monthly dues effortlessly.",
+  parcel:
+    "Sophisticated website interface meticulously crafted to facilitate seamless package tracking and management.",
 };
 
 function App() {
-  let description = "test";
-
   useEffect(() => {
     ScrollReveal().reveal(".scrollProject", {
       delay: 250,
@@ -97,18 +145,18 @@ function App() {
             lately that show how dedicated I am to doing a great job in
             different areas.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 justify-evenly">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 pb-3">
             <Project
               img="parcel-tracker.png"
               title="Parcel Tracker"
-              description={description}
-              icons={[Icons.node, Icons.github, Icons.mongo, Icons.mysql]}
+              description={descriptions.parcel}
+              icons={[Icons.html,Icons.css,Icons.javascript,Icons.tailwind,Icons.node,Icons.express,Icons.mongo,Icons.github,]}
             />
             <Project
               img="carrisa.png"
               title="Carrisa Homes"
-              description={description}
-              icons={[Icons.php, Icons.github]}
+              description={descriptions.carrisa}
+              icons={[Icons.html,Icons.css,Icons.javascript,Icons.bootstrap,Icons.php, Icons.mysql,Icons.mailgun,Icons.github]}
             />
           </div>
         </section>

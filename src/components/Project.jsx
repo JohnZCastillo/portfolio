@@ -1,6 +1,6 @@
 import { Card } from "flowbite-react";
-import Github from "../assets/github.svg?react";
 import Icon from "./Icon";
+import { Button } from 'flowbite-react';
 
 export default function Project({
   title,
@@ -24,25 +24,15 @@ export default function Project({
             {description}
           </p>
 
-          <div className="grid grid-cols-1 ">
+          <div>
             <span>
-              {website ? (
-                <a target="_blank" href="https://blue-muddy-bream.cyclic.app/">
-                 Parcel Tracker
+                <a className="text-black" target="_blank" href="https://blue-muddy-bream.cyclic.app/">
+                <Button color="dark">Visit</Button>
                 </a>
-              ) : (
-                <></>
-              )}
-            </span>
-            <span>
-              <Github fill="grey" />
-              <a href=" https://github.com/JohnZCastillo/parcel-tracker">
-              Parcel Tracker
-              </a>
             </span>
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             {icons.map(({ svg, color, name, hover }, index) => {
               return (
                 <Icon
