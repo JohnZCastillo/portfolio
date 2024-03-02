@@ -147,14 +147,18 @@ function App() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 pb-3">
             <Project
+              repo='https://github.com/JohnZCastillo/parcel-tracker'
               img="parcel-tracker.png"
+              website='https://blue-muddy-bream.cyclic.app/'
               title="Parcel Tracker"
               description={descriptions.parcel}
               icons={[Icons.html,Icons.css,Icons.javascript,Icons.tailwind,Icons.node,Icons.express,Icons.mongo,Icons.github,]}
             />
             <Project
+             repo='https://github.com/JohnZCastillo/Capstone'
               img="carrisa.png"
               title="Carrisa Homes"
+              website='https://carrisa-homes.me/'
               description={descriptions.carrisa}
               icons={[Icons.html,Icons.css,Icons.javascript,Icons.bootstrap,Icons.php, Icons.mysql,Icons.mailgun,Icons.github]}
             />

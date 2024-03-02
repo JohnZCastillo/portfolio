@@ -13,10 +13,11 @@ export default function Project({
   return (
     <>
         <Card
-          className="max-width-sm mx-auto"
+          className="relative max-width-sm mx-auto"
           imgSrc={img}
           horizontal
         >
+          <a className="text-gray-700 absolute top-2 right-5" href={repo}>visit repository</a>
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {title}
           </h5>
@@ -26,7 +27,7 @@ export default function Project({
 
           <div>
             <span>
-                <a className="text-black" target="_blank" href="https://blue-muddy-bream.cyclic.app/">
+                <a className="text-black" target="_blank" href={website}>
                 <Button color="dark">Visit</Button>
                 </a>
             </span>
