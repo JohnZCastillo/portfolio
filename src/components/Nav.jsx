@@ -11,8 +11,8 @@ export default function Nav() {
         </div>
         <Navbar.Collapse>
           <Navbar.Link className='text-xl text-white' href="#" >Home</Navbar.Link>
-          <Navbar.Link className='text-xl text-white' href="#">About</Navbar.Link>
-          <Navbar.Link className='text-xl text-white' href="#">Projects</Navbar.Link>
+          <Navbar.Link className='text-xl text-white' href="#about">About</Navbar.Link>
+          <Navbar.Link className='text-xl text-white' href="#projects">Projects</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
     );

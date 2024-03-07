@@ -116,8 +116,8 @@ function App() {
       <Nav />
       <Hero />
 
-      <div className="px-3 md:px-6 bg-[#0e0d11]">
-        <section className="py-6 min-h-96 scrollAbout px-2">
+      <div  className="px-3 md:px-6 bg-[#0e0d11]">
+        <section  id="about" className="py-6 min-h-96 scrollAbout px-2">
           <h2 className="text-5xl md:text-6xl mb-2 font-bold">About</h2>
           <p className="max-w-[75ch] mb-4 text-lg">
             I am John Castillo, taking Bachelor of Science in Information
@@ -134,7 +134,7 @@ function App() {
           <Mysql fill="grey" />
         </section>
 
-        <section className="scrollProject min-h-svh ">
+        <section id="projects" className="scrollProject min-h-svh ">
           <h2 className="text-5xl md:text-6xl mb-2 font-bold">
             Recent Projects
           </h2>
@@ -145,7 +145,7 @@ function App() {
             lately that show how dedicated I am to doing a great job in
             different areas.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 pb-3">
+          <div  className="grid grid-cols-1 md:grid-cols-2 gap-2 pb-3">
             <Project
               repo='https://github.com/JohnZCastillo/parcel-tracker'
               img="parcel-tracker.png"

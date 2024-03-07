@@ -1,4 +1,4 @@
-import { Card } from "flowbite-react";
+import { Card, TextInput } from "flowbite-react";
 import Icon from "./Icon";
 import { Button } from 'flowbite-react';
 
