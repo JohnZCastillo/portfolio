@@ -20,6 +20,9 @@ import Mysql from "./assets/mysql.svg?react";
 import { useEffect } from "react";
 import Bottom from "./components/Bottom";
 
+import jt from "./assets/journeytech-exp.jpg";
+import symph from "./assets/symph-exp.jpg";
+
 const Icons = {
   github: {
     svg: Github,
@@ -100,6 +103,8 @@ let descriptions = {
     "Professional platform designed to streamline subdivision management, providing users with seamless access to pay and track their monthly dues effortlessly.",
   parcel:
     "Sophisticated website interface meticulously crafted to facilitate seamless package tracking and management.",
+  budget:
+    "This personal finance app helps users manage their money by tracking budgets and expenses in different categories. It features an AI-powered chat assistant that gives useful financial advice. Built with modern tools like React, Tailwind CSS, and Supabase, the app offers a smooth, secure experience with real-time updates and easy budget management.",
 };
 
 function App() {
@@ -116,14 +121,16 @@ function App() {
       <Nav />
       <Hero />
 
-      <div  className="px-3 md:px-6 bg-[#0e0d11]">
-        <section  id="about" className="py-6 min-h-96 scrollAbout px-2">
-          <h2 className="text-5xl md:text-6xl mb-2 font-bold">About</h2>
+      <div className="px-3 md:px-6 bg-[#0e0d11]">
+        <section id="about" className="py-6 min-h-96 scrollAbout px-2">
+          <h2 className="text-5xl md:text-6xl mb-2 font-bold">About Me</h2>
           <p className="max-w-[75ch] mb-4 text-lg">
-            I am John Castillo, taking Bachelor of Science in Information
-            Technology at Cavite State University - Tanza Campus. In my free
-            time, I watch videos about technology and read books about personal
-            development and technology.
+            I love learning new things and creating websites that are easy to
+            use and look good. I enjoy working with others and by myself, and I
+            am always ready to try new tools and ways of building websites. I
+            like to help make old systems better or start new projects from the
+            beginning. My goal is to make web applications that work well and
+            are helpful for people.
           </p>
         </section>
 
@@ -134,7 +141,7 @@ function App() {
           <Mysql fill="grey" />
         </section>
 
-        <section id="projects" className="scrollProject min-h-svh ">
+        <section id="projects" className="scrollProject min-h-svh mb-5 ">
           <h2 className="text-5xl md:text-6xl mb-2 font-bold">
             Recent Projects
           </h2>
@@ -145,24 +152,103 @@ function App() {
             lately that show how dedicated I am to doing a great job in
             different areas.
           </p>
-          <div  className="grid grid-cols-1 md:grid-cols-2 gap-2 pb-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 pb-3">
             <Project
-              repo='https://github.com/JohnZCastillo/parcel-tracker'
+              repo="https://github.com/JohnZCastillo/budget-management-system.git"
               img="parcel-tracker.png"
-              website='https://blue-muddy-bream.cyclic.app/'
-              title="Parcel Tracker"
-              description={descriptions.parcel}
-              icons={[Icons.html,Icons.css,Icons.javascript,Icons.tailwind,Icons.node,Icons.express,Icons.mongo,Icons.github,]}
+              website="https://budget-management-system-abbp.onrender.com"
+              title="Budget Tracker"
+              description={descriptions.budget}
+              icons={[
+                Icons.html,
+                Icons.css,
+                Icons.javascript,
+                Icons.tailwind,
+                Icons.node,
+                Icons.express,
+                Icons.mongo,
+                Icons.github,
+              ]}
             />
             <Project
-             repo='https://github.com/JohnZCastillo/Capstone'
+              repo="https://github.com/JohnZCastillo/Capstone"
               img="carrisa.png"
               title="Carrisa Homes"
-              website='https://carrisa-homes.me/'
+              website="https://carrisa-homes.me/"
               description={descriptions.carrisa}
-              icons={[Icons.html,Icons.css,Icons.javascript,Icons.bootstrap,Icons.php, Icons.mysql,Icons.mailgun,Icons.github]}
+              icons={[
+                Icons.html,
+                Icons.css,
+                Icons.javascript,
+                Icons.bootstrap,
+                Icons.php,
+                Icons.mysql,
+                Icons.mailgun,
+                Icons.github,
+              ]}
             />
           </div>
+        </section>
+
+        <section id="experience" className="min-h-svh pb-2">
+          <h2 className="text-5xl md:text-6xl mb-2 font-bold">
+            Professional Experience
+          </h2>
+          <p className="max-w-[80ch] mb-4 text-lg">
+            I am a web developer skilled in modern frameworks like React,
+            Svelte, and Laravel. I focus on writing clean, maintainable code and
+            enjoy working with teams to create reliable, user-friendly web
+            applications that solve real problems.
+          </p>
+
+          <ol class="relative border-s border-gray-200 pb-2">
+            <li class="mb-10 ms-4">
+              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+              <div className="flex justify-between flex-wrap">
+                <div>
+                  <time class="mb-1 text-sm font-normal leading-none">
+                    February 2025 - Present
+                  </time>
+                  <h3 class="text-2xl font-bold">JourneyTech inc.</h3>
+                  <h4 class="text-mds italic mb-2">Jr Web Developer</h4>
+                  <p class="mb-4 text-base font-normal max-w-[65ch]">
+                    At Journey Tech, I worked as a Junior Web Developer,
+                    building user interfaces with React and managing backend
+                    tasks with Laravel. I helped with code reviews and
+                    troubleshooting, focused on writing clean code, and
+                    collaborated with my team to deliver high-quality web
+                    applications.
+                  </p>
+                </div>
+                <div>
+                  <img src={jt} className="w-[200px] block mx-auto" />
+                </div>
+              </div>
+            </li>
+            <li class="ms-4">
+              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+              <div className="flex justify-between flex-wrap">
+                <div>
+                  <time class="mb-1 text-sm font-normal leading-none">
+                    April 2024 - July 2024
+                  </time>
+                  <h3 class="text-2xl font-bold">Symph</h3>
+                  <h4 class="text-mds italic mb-2">
+                    Full Stack Web Developer Intern
+                  </h4>
+                  <p class="mb-4 text-base font-normal max-w-[65ch]">
+                    At Symph Inc, I worked remotely as a Full Stack Web
+                    Developer Intern, improving legacy apps with new Svelte
+                    features and leading the migration from Python 2 to Python 3
+                    using Flask, which modernized and optimized the system.
+                  </p>
+                </div>
+                <div>
+                  <img src={symph} className="w-[200px] block mx-auto" />
+                </div>
+              </div>
+            </li>
+          </ol>
         </section>
       </div>
 
