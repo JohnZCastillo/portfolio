@@ -103,6 +103,8 @@ let descriptions = {
     "Professional platform designed to streamline subdivision management, providing users with seamless access to pay and track their monthly dues effortlessly.",
   parcel:
     "Sophisticated website interface meticulously crafted to facilitate seamless package tracking and management.",
+  budget:
+    "This personal finance app helps users manage their money by tracking budgets and expenses in different categories. It features an AI-powered chat assistant that gives useful financial advice. Built with modern tools like React, Tailwind CSS, and Supabase, the app offers a smooth, secure experience with real-time updates and easy budget management.",
 };
 
 function App() {
@@ -156,7 +158,7 @@ function App() {
               img="parcel-tracker.png"
               website="https://budget-management-system-abbp.onrender.com"
               title="Budget Tracker"
-              description={descriptions.parcel}
+              description={descriptions.budget}
               icons={[
                 Icons.html,
                 Icons.css,
