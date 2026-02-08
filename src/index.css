@@ -14,3 +14,10 @@
     height: 40px;
 }
 
+.icon-mask{
+    mask: url('./assets/postman.svg');
+    mask-repeat: no-repeat;
+    mask-size: 'auto';
+    width: 24x;
+    height: 24px;
+}

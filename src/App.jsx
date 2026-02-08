@@ -4,108 +4,250 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import ScrollReveal from "scrollreveal";
 
-import CSS from "./assets/css.svg?react";
-import TailWind from "./assets/tailwind.svg?react";
-import Express from "./assets/express.svg?react";
+import CSS from "./assets/css.svg";
+import TailWind from "./assets/tailwind.svg";
+import Express from "./assets/express.svg";
 
-import Bootstrap from "./assets/bootstrap.svg?react";
-import Javascript from "./assets/javascript.svg?react";
-import HTML from "./assets/html.svg?react";
-import Github from "./assets/github.svg?react";
-import Mailgun from "./assets/mailgun.svg?react";
-import Node from "./assets/node-js.svg?react";
-import Php from "./assets/php.svg?react";
-import Mongo from "./assets/mongo-db.svg?react";
-import Mysql from "./assets/mysql.svg?react";
+import Bootstrap from "./assets/bootstrap.svg";
+import Javascript from "./assets/javascript.svg";
+import HTML from "./assets/html.svg";
+import Github from "./assets/github.svg";
+import Mailgun from "./assets/mailgun.svg";
+import Node from "./assets/node-js.svg";
+import Php from "./assets/php.svg";
+import Mongo from "./assets/mongo-db.svg";
+import Mysql from "./assets/mysql.svg";
+import Sqlite from "./assets/sqlite.svg";
+import Vue from "./assets/vue.svg";
+import Postgres from "./assets/postgres.svg";
+import Flask from "./assets/flask.svg";
+import Python from "./assets/python.svg";
+import React from "./assets/react.svg";
+import Laravel from "./assets/laravel.svg";
+import Docker from "./assets/docker.svg";
+import Postman from "./assets/postman.svg";
+
+
+import Expo from "./assets/expo.svg";
 import { useEffect } from "react";
 import Bottom from "./components/Bottom";
 
 import jt from "./assets/journeytech-exp.jpg";
 import symph from "./assets/symph-exp.jpg";
+import Icon from "./components/Icon";
 
 const Icons = {
   github: {
     svg: Github,
     color: "grey",
     name: "Github",
-    hover: "icon hover:fill-[#181717]",
+    hover: "#181717",
+  },
+  postman: {
+    svg: Postman,
+    color: "grey",
+    name: "Postman",
+    hover: "#181717",
+  },
+  docker: {
+    svg: Docker,
+    color: "grey",
+    name: "Docker",
+    hover: "#181717",
+  },
+  laravel: {
+    svg: Laravel,
+    color: "grey",
+    name: "Laravel",
+    hover: "#181717",
+  },
+  react: {
+    svg: React,
+    color: "grey",
+    name: "React Js",
+    hover: "#181717",
   },
   node: {
     svg: Node,
     color: "grey",
     name: "Node Js",
-    hover: "icon hover:fill-[#3c873a]",
+    hover: "#3c873a",
   },
   mailgun: {
     svg: Mailgun,
     color: "grey",
     name: "Mailgun",
-    hover: "icon hover:fill-[#ff3366]",
+    hover: "#ff3366",
   },
   php: {
     svg: Php,
     color: "grey",
     name: "PHP",
-    hover: "icon hover:fill-[#8892BF]",
+    hover: "#8892BF",
   },
   mongo: {
     svg: Mongo,
     color: "grey",
     name: "Mongo DB",
-    hover: "icon hover:fill-[#13aa52]",
+    hover: "#13aa52",
   },
   mysql: {
     svg: Mysql,
     color: "grey",
     name: "MySql",
-    hover: "icon hover:fill-[#00758F]",
+    hover: "#00758F",
   },
   html: {
     svg: HTML,
     color: "grey",
     name: "HTML",
-    hover: "icon hover:fill-[#00758F]",
+    hover: "#00758F",
   },
   css: {
     svg: CSS,
     color: "grey",
     name: "CSS",
-    hover: "icon hover:fill-[#00758F]",
+    hover: "#00758F",
   },
   tailwind: {
     svg: TailWind,
     color: "grey",
     name: "Tailwind",
-    hover: "icon hover:fill-[#00758F]",
+    hover: "#00758F",
   },
   express: {
     svg: Express,
     color: "grey",
     name: "Express",
-    hover: "icon hover:fill-[#00758F]",
+    hover: "#00758F",
   },
   javascript: {
     svg: Javascript,
     color: "grey",
     name: "Javascript",
-    hover: "icon hover:fill-[#00758F]",
+    hover: "#00758F",
   },
   bootstrap: {
     svg: Bootstrap,
     color: "grey",
     name: "Bootstrap",
-    hover: "icon hover:fill-[#00758F]",
+    hover: "#00758F",
+  },
+  expo: {
+    svg: Expo,
+    color: "grey",
+    name: "Expo",
+    hover: "#00758F",
+  },
+   sqlLite: {
+    svg: Sqlite,
+    color: "grey",
+    name: "Sql Lite",
+    hover: "#00758F",
+  },
+  vue: {
+    svg: Vue,
+    color: "grey",
+    name: "Vue",
+    hover: "#00758F",
+  },
+  postgres: {
+    svg: Postgres,
+    color: "grey",
+    name: "Postgres",
+    hover: "#00758F",
+  },
+   flask: {
+    svg: Flask,
+    color: "grey",
+    name: "Flask",
+    hover: "#00758F",
+  },
+   python: {
+    svg: Python,
+    color: "grey",
+    name: "Python",
+    hover: "#00758F",
   },
 };
 
-let descriptions = {
-  carrisa:
-    "Professional platform designed to streamline subdivision management, providing users with seamless access to pay and track their monthly dues effortlessly.",
-  parcel:
-    "Sophisticated website interface meticulously crafted to facilitate seamless package tracking and management.",
-  budget:
-    "This personal finance app helps users manage their money by tracking budgets and expenses in different categories. It features an AI-powered chat assistant that gives useful financial advice. Built with modern tools like React, Tailwind CSS, and Supabase, the app offers a smooth, secure experience with real-time updates and easy budget management.",
-};
+const technolgies = {
+  frontend: [
+    Icons.html,
+    Icons.css,
+    Icons.javascript,
+    Icons.bootstrap,
+    Icons.tailwind,
+    Icons.react,
+    Icons.vue
+  ],
+  backend: [
+    Icons.php,
+    Icons.python,
+    Icons.node,
+    Icons.express,
+    Icons.laravel
+  ],
+  databases: [
+    Icons.mysql,
+    Icons.mongo,
+    Icons.postgres
+  ],
+   tools: [
+    Icons.github,
+    Icons.docker,
+    Icons.postman
+  ]
+}
+
+const projects = [
+  {
+    title: 'Pet Adoption System',
+    description: 'My family have dogs, Having part of the family, it teaches me to be a responsible member of the family. In my community there are a lot of stray dogs, with this I built a system for adoption',
+    hero: '',
+    link: 'test',
+    repository: 'test',
+    technolgies: [
+      Icons.html,
+      Icons.css,
+      Icons.javascript,
+      Icons.python,
+      Icons.flask,
+      Icons.postgres
+    ],
+  },
+  {
+    title: 'Moble Budget Sytem',
+    description: 'I built this app to track my expenses. I always wonder where I spent my money because just after a week its all gone!, At first i built a web app, but later on i decided to make it a mobile application so I can use it even with no internet.',
+    hero: '',
+    link: 'test',
+    repository: 'test',
+    technolgies: [  
+      Icons.expo,
+      Icons.node,
+      Icons.sqlLite
+    ],
+  },
+  {
+    title: 'Castle POS',
+    description: `I joined a fb group for business people, and many times there were people wanting to have a free POS because they cannot afford yet a paid one.
+      I built this to help them. This is not BIR Complaint because its not meant to be permanent solution just a temporary.
+    `,
+    hero: '',
+    link: 'test',
+    repository: 'test',
+    technolgies: [
+      Icons.html,
+      Icons.css,
+      Icons.javascript,  
+      Icons.node,
+      Icons.vue,
+      Icons.express,
+      Icons.postgres
+    ],
+  }
+]
+
 
 function App() {
   useEffect(() => {
@@ -121,8 +263,10 @@ function App() {
       <Nav />
       <Hero />
 
+    
+
       <div className="px-3 md:px-6 bg-[#0e0d11]">
-        <section id="about" className="py-6 min-h-96 scrollAbout px-2">
+        <section id="about" className="py-6  scrollAbout px-2">
           <h2 className="text-5xl md:text-6xl mb-2 font-bold">About Me</h2>
           <p className="max-w-[75ch] mb-4 text-lg">
             I love learning new things and creating websites that are easy to
@@ -134,11 +278,23 @@ function App() {
           </p>
         </section>
 
-        <section className="flex justify-evenly min-h-20 ">
-          <Github fill="grey" />
-          <Node fill="grey" />
-          <Php fill="grey" />
-          <Mysql fill="grey" />
+        <section className="grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mb-[80px]">
+          
+          {Object.keys(technolgies).map(key => (
+            <div className="grid grid-cols-3">
+              {technolgies[key].map(icon =>(
+                <Icon  
+                  Svg={icon.svg} 
+                  color={icon.color} 
+                  name={icon.name} 
+                  hover="white"
+                  width="30px"
+                  height="30px"
+              />
+              ))}
+            </div>
+          ))}
+
         </section>
 
         <section id="projects" className="scrollProject min-h-svh mb-5 ">
@@ -153,40 +309,16 @@ function App() {
             different areas.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 pb-3">
-            <Project
-              repo="https://github.com/JohnZCastillo/budget-management-system.git"
-              img="parcel-tracker.png"
-              website="https://budget-management-system-abbp.onrender.com"
-              title="Budget Tracker"
-              description={descriptions.budget}
-              icons={[
-                Icons.html,
-                Icons.css,
-                Icons.javascript,
-                Icons.tailwind,
-                Icons.node,
-                Icons.express,
-                Icons.mongo,
-                Icons.github,
-              ]}
-            />
-            <Project
-              repo="https://github.com/JohnZCastillo/Capstone"
-              img="carrisa.png"
-              title="Carrisa Homes"
-              website="https://carrisa-homes.me/"
-              description={descriptions.carrisa}
-              icons={[
-                Icons.html,
-                Icons.css,
-                Icons.javascript,
-                Icons.bootstrap,
-                Icons.php,
-                Icons.mysql,
-                Icons.mailgun,
-                Icons.github,
-              ]}
-            />
+            {projects.map(project => (<>
+              <Project 
+                repo={project.repository}
+                img={project.hero}
+                website={project.link}
+                title={project.title}
+                description={project.description}
+                icons={project.technolgies}
+              />
+            </>))}
           </div>
         </section>
 
