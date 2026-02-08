@@ -205,8 +205,8 @@ const projects = [
     title: 'Pet Adoption System',
     description: 'My family have dogs, Having part of the family, it teaches me to be a responsible member of the family. In my community there are a lot of stray dogs, with this I built a system for adoption',
     hero: '',
-    link: 'test',
-    repository: 'test',
+    link: null,
+    repository: 'https://github.com/JohnZCastillo/animal-adoption.git',
     technolgies: [
       Icons.html,
       Icons.css,
@@ -217,11 +217,11 @@ const projects = [
     ],
   },
   {
-    title: 'Moble Budget Sytem',
+    title: 'Mobile Budget Sytem',
     description: 'I built this app to track my expenses. I always wonder where I spent my money because just after a week its all gone!, At first i built a web app, but later on i decided to make it a mobile application so I can use it even with no internet.',
     hero: '',
-    link: 'test',
-    repository: 'test',
+    link: null,
+    repository: 'https://github.com/JohnZCastillo/mobile-budget-management.git',
     technolgies: [  
       Icons.expo,
       Icons.node,
@@ -234,8 +234,8 @@ const projects = [
       I built this to help them. This is not BIR Complaint because its not meant to be permanent solution just a temporary.
     `,
     hero: '',
-    link: 'test',
-    repository: 'test',
+    link: null,
+    repository: 'https://github.com/JohnZCastillo/modern-inventory.git',
     technolgies: [
       Icons.html,
       Icons.css,

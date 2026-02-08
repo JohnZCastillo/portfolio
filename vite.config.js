@@ -8,5 +8,8 @@ export default defineConfig({
     react(),
     svgr(),
   ],
+  build: {
+    assetsInlineLimit: 0  // Disables inlining entirely
+  },
   base: './',
 });
