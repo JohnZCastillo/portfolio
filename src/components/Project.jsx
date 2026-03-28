@@ -1,67 +1,48 @@
-import { Card, TextInput } from "flowbite-react";
 import Icon from "./Icon";
+import GithubSvg from '../assets/github.svg?react';
+import LinkSvg from '../assets/link.svg?react';
 
-import Github from '../assets/github.svg?react';
-import Link from '../assets/link.svg?react';
-
-
-export default function Project({
-  title,
-  img,
-  description,
-  website,
-  repo,
-  icons = [],
-}) {
+export default function Project({ title, img, description, website, repo, icons = [] }) {
   return (
-    <>
-        <Card
-          className="relative max-width-sm mx-auto"
-          imgSrc={img}
-          horizontal
-        >
-          {/* <a className="text-gray-700 absolute top-2 right-5" href={repo}>visit repository</a> */}
-          <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            {title}
-          </h5>
-          <p className="font-normal text-gray-700 dark:text-gray-400">
-            {description}
-          </p>
+    <div className="project-card bg-[#19191c] border border-white/8 rounded-2xl overflow-hidden flex flex-col">
+      {img && (
+        <div className="h-48 overflow-hidden">
+          <img src={img} alt={title} className="w-full h-full object-cover" />
+        </div>
+      )}
+      <div className="p-6 flex flex-col flex-1">
+        <h5 className="text-xl font-bold text-white mb-2">{title}</h5>
+        <p className="text-gray-400 text-sm leading-relaxed flex-1 mb-4">{description}</p>
 
-          <div className="flex gap-2 items-center">
-              {website && (
-                <span>
-                    <a className="flex items-center gap-2 rounded-md bg-gray-800 p-2" target="_blank" href={website}>
-                    <Link fill="gray" />
-                    <span className="text-white text-sm">Live Preview</span>
-                    </a>
-                </span>
-              )}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {icons.map(({ svg, color, name, hover }, index) => (
+            <Icon key={index} Svg={svg} color={color} name={name} hover={hover} />
+          ))}
+        </div>
 
-               {repo && (
-                <span>
-                    <a className="flex items-center gap-2 rounded-md bg-gray-800 p-2" target="_blank" href={repo}>
-                    <Github fill="gray" />
-                    <span className="text-white text-sm">Repository</span>
-                    </a>
-                </span>
-              )}
-          </div>
-
-          <div className="flex gap-2 flex-wrap border-t pt-2">
-            {icons.map(({ svg, color, name, hover}, index) => {
-              return (
-                <Icon
-                  Svg={svg}
-                  color={color}
-                  name={name}
-                  hover={hover}
-                  id={index}
-                />
-              );
-            })}
-          </div>
-        </Card>
-    </>
+        <div className="flex gap-2 pt-4 border-t border-white/8">
+          {website && (
+            <a
+              href={website}
+              target="_blank"
+              className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-sm text-gray-300 hover:text-white transition-colors"
+            >
+              <LinkSvg fill="currentColor" className="w-4 h-4" />
+              Live Preview
+            </a>
+          )}
+          {repo && (
+            <a
+              href={repo}
+              target="_blank"
+              className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-sm text-gray-300 hover:text-white transition-colors"
+            >
+              <GithubSvg fill="currentColor" className="w-4 h-4" />
+              Repository
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
   );
 }
