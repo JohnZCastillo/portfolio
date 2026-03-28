@@ -30,7 +30,6 @@ import Postman from "./assets/postman.svg";
 import Expo from "./assets/expo.svg";
 
 
-
 const mk = (svg, name, hover = "#f8b659") => ({ svg, name, color: "#6b7280", hover });
 
 const Icons = {
@@ -187,7 +186,7 @@ function App() {
                 company: "JourneyTech Inc.",
                 role: "Jr. Web Developer",
                 description: "Built user interfaces with React and managed backend tasks with Laravel. Participated in code reviews, focused on clean code, and collaborated with the team to deliver high-quality web applications.",
-                img: "/journeytech.avif",
+                img: "./journeytech.avif",
                 current: true,
               },
               {
@@ -195,7 +194,7 @@ function App() {
                 company: "Symph",
                 role: "Full Stack Web Developer Intern",
                 description: "Worked remotely improving legacy apps with new Svelte features and led the migration from Python 2 to Python 3 using Flask, modernizing and optimizing the system.",
-                img: "/symph.svg",
+                img: "./symph.svg",
                 current: false,
               },
             ].map(({ period, company, role, description, img, current }) => (
