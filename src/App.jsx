@@ -66,12 +66,12 @@ const technologies = [
 
 const projects = [
   {
-    title: "Pet Adoption System",
-    description: "My family have dogs — having them as part of the family taught me responsibility. Seeing stray dogs in my community inspired me to build an adoption system.",
+    title: "Post ni John",
+    description: " built this Postman-inspired API client from scratch because Postman recently made their collaboration features paid. It fully supports workspaces, request collections, and real-time collaboration via WebSockets",
     hero: "",
-    link: null,
-    repository: "https://github.com/JohnZCastillo/animal-adoption.git",
-    technologies: [Icons.html, Icons.css, Icons.javascript, Icons.python, Icons.flask, Icons.postgres],
+    link: "https://post-ni-john.onrender.com/workspaces",
+    repository: "https://github.com/JohnZCastillo/postnijohn",
+    technologies: [Icons.react, Icons.tailwind, Icons.node, Icons.express, Icons.javascript],
   },
   {
     title: "Mobile Budget System",
